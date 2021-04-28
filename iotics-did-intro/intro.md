@@ -2,7 +2,7 @@
 
 Decentralized Identity (DID) is a new technology designed to gives you, the individual, direct control over your identity. The W3C describe it as:
 
-> a globally unique identifier that does not require a centralized registration authority because it is registered with distributed ledger technology or other form of decentralized network.”
+> a globally unique identifier that does not require a centralized registration authority because it is registered with distributed ledger technology or other form of decentralized network.
 
 DIDs are an emerging effort for establishing a standard for self-sovereign digital identities from the W3C Credentials Community Group. They provide entities with a means to self-manage cryptographic  key material and other metadata about their identity. This data can be used to authenticate an entity to third parties or to request authorisation for access to a given resource.
 

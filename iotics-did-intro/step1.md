@@ -1,19 +1,19 @@
 # Iotics User DID Creation
 
-Make a random secret seed of identity.
+The first step is to create a random secret seed for the generation of your identity.
 
-All your identities will be derived from this.
+All your identities will come from this one seed so you must keep it secret and secure.
 
-This will be your secret and you should keep it safe.
+Creating your seed is a s simple as running:
 
 `user_seed=$(create_seed)`{{execute}}
 
 `echo $user_seed`{{execute}}
 
-Using your seed, you can create one or more user identities.
+Now that you have your seed you can use it to create user identities:
 
 `user_id=$(create_user_id)`{{execute}}
 
 `echo $user_id`{{execute}}
 
-Great job!
+You've just created your first secure identity, great job!

@@ -1,8 +1,7 @@
 # Iotics API Authentication
 
-Now the Agent can create an Authentication Token
+Now we have an Agent that is allowed to work on our behalf, we just need the Agent to create an Authentication Token for us:
 
 `make_token $agent_id $user_id`{{execute}}
 
-Now you have the to use with the Iotics API
-
+That's it, and now you have the authenticated token to use with the Iotics API!

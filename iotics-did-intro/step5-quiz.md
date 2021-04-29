@@ -1,8 +1,8 @@
->>Q1: Applications are running using _Agent_ DID.<<
+>>Q1: Applications are running using Agent DID.<<
 (*) Correct
 ( ) Incorrect
 
->>Q2: _Agents_ are delegated to act on behalf of _Users_.<<
+>>Q2: Agents are delegated to act on behalf of Users.<<
 (*) Correct
 ( ) Incorrect
 

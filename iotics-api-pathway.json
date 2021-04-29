@@ -1,0 +1,10 @@
+{
+  "title": "Iotics API",
+  "description": "Introduction to Iotics API",
+  "courses": [{
+    "course_id": "iotics-api-twins",
+    "title": "Intro to Iotics API - Twins",
+    "description": "Introduction to Iotics API"
+  }
+  ]
+}

@@ -14,8 +14,8 @@ NOTE: All requests are using `Content-Type: application/json`.
 
 Post the payload to the `/twins` Iotics API endpoint to create the twin inside the _Host_.
 
-`curl --http1.1 -X POST "$HOST/twins" -H "Iotics-ClientAppId: katacoda" -H "Authorization: Bearer $TOKEN" -H "Content-Type: application/json" -H "Accept: application/json" -d @/tmp/twin.json`{{execute}}
+`curl --http1.1 -X POST "$HOST/twins" -H "Iotics-ClientAppId: katacoda" -H "Authorization: Bearer $TOKEN" -H "Content-Type: application/json" -H "Accept: application/json" -d @/tmp/twin.json | jq`{{execute}}
 
-You can get the details of the crated Digital Twin like this:
+You can get the details of the created Digital Twin like this:
 
-`curl --http1.1 -X GET "$HOST/twins/$TWIN0" -H "Content-Type: application/json" -H "Accept: application/json" -H "Iotics-ClientAppId: katacoda" -H "Authorization: Bearer $TOKEN"`{{execute}}
+`curl --http1.1 -X GET "$HOST/twins/$TWIN0" -H "Content-Type: application/json" -H "Accept: application/json" -H "Iotics-ClientAppId: katacoda" -H "Authorization: Bearer $TOKEN" | jq`{{execute}}

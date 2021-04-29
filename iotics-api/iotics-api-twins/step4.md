@@ -14,4 +14,4 @@ EOF`{{execute}}
 
 Post the payload to the `/searches/requests` endpoint of the Iotics API:
 
-`curl --http1.1 -X POST "$HOST/searches/requests?scope=LOCAL" -H "Iotics-ClientAppId: katacoda" -H "Authorization: Bearer $TOKEN" -H "Content-Type: application/json" -H "Accept: application/json" -H "Iotics-RequestTimeout: $(date +%FT%T.000000 --date="+10 second") -d @/tmp/search.json`{{execute}}
+`curl --http1.1 -X POST -H "Iotics-ClientAppId: katacoda" -H "Authorization: Bearer $TOKEN" -H "Content-Type: application/json" -H "Accept: application/json" -H "Iotics-RequestTimeout: $(date +%FT%T.000000 --date="+30 second") -d @/tmp/search.json "$HOST/searches?scope=LOCAL" | jq`{{execute}}

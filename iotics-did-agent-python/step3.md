@@ -8,4 +8,4 @@ Now the User has delegated authentication to the Agent, the Agent can create an 
       'not used',        # Audience is the id/address/url we're authenticating to
       123,               # Duration seconds
       Identifier.private_hex_to_ECDSA(user_private)
-)`{{execute}}
+); print(authentication_token)`{{execute}}

@@ -8,4 +8,4 @@ Delegation requires crytographic proof from the entity asking for delegation.  T
 
 The Agent must ask the User (or Twin) for delegation with proof.
 
-`proof = Document.new_proof(user_doc.id, Identifier.private_hex_to_ECDSA(agent_private))`{{execute}}
+`proof = Document.new_proof(user_doc.id.encode(), Identifier.private_hex_to_ECDSA(agent_private))`{{execute}}

@@ -1,6 +1,4 @@
 #!/bin/bash
-set +x
-
 echo "Adding DID functions:"
 
 echo -e "- \e[33mcreate_seed\e[0m"
@@ -43,6 +41,6 @@ make_token() {
     cat /tmp/unicorn.txt
 }
 
-echo "###############################################"
-echo "Scenario ready"
-echo
+# ###############################################
+# Scenario ready
+# ###############################################

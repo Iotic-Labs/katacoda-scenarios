@@ -28,7 +28,9 @@ The following key terms and their usage will be explained in the next steps:
 * User
 * Agent
 
-![User-Agent-Twin](./assets/user-agent-twin.png)
+The *Digital Twins* will be explained in another scenario.
+
+![Seed-User-Agent-DigitalTwin](./assets/seed-user-agent-twin.png)
 
 Anyone who sees an _Agent_'s identity can't see the _User_'s identity or _Digital Twins_ which they can control.
 

@@ -1,3 +1,5 @@
+![Seed-User-Agent-DigitalTwin](./assets/seed-user-agentX-twin.png)
+
 To run your applications and authenticate with the Iotics API you need an _Agent_.
 
 * An _Agent_ works on behalf of the _User_.

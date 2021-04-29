@@ -1,0 +1,19 @@
+{
+  "title": "DID",
+  "description": "Introduction to Iotics Decentralised Identity",
+  "courses": [{
+    "course_id": "iotics-did-intro",
+    "title": "Intro to DID",
+    "description": "Introduction to Iotics Decentralised Identity"
+  },
+  {
+    "course_id": "iotics-did-intro-python",
+    "title": "Get started with Iotics DID in Python",
+    "description": "Introduction to Iotics Decentralised Identity in Python"
+  },
+  {
+    "course_id": "iotics-did-agent-python",
+    "title": "Continue learning about Iotics Identity by creating an Agent and Delegation",
+    "description": "How to create a challenge on using Kubernetes"
+  }]
+}

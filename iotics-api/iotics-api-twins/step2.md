@@ -1,6 +1,8 @@
-# Introduction to Iotics API - Twins
+# Update Digital Twin Metadata
 
-Update Twin Metadata
+To update the Digital Twin you need to update its metadata:
+
+For example, you can update its location and labels (and more…).
 
 `envsubst << EOF > /tmp/metadata.json
 {"location":{"location": {
@@ -8,12 +10,14 @@ Update Twin Metadata
                "lon": 1.4658129805029452}},
  "labels":{"added":[{
                 "lang": "en",
-                "value": "Twin Label Example"}]}
+                "value": "Digital Twin Label Example"}]}
 }
 EOF`{{execute}}
 
+Post the payload back to the endpoint of the digital twin:
+
 `curl --http1.1 -X PATCH "$HOST/twins/$TWIN0" -H "Iotics-ClientAppId: katacoda" -H "Authorization: Bearer $TOKEN" $CONTENTHEADER -d @/tmp/metadata.json`{{execute}}
 
-Describe Twin
+You can get the details of the updated Digital Twin like this:
 
 `curl --http1.1 -X GET "$HOST/twins/$TWIN0" $CONTENTHEADER -H "Iotics-ClientAppId: katacoda" -H "Authorization: Bearer $TOKEN"`{{execute}}

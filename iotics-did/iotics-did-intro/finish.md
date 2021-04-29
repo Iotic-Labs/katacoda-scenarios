@@ -1,5 +1,3 @@
-# Finish
-
 Great work!
 
 ## Additional Resources

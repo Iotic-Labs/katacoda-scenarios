@@ -1,7 +1,5 @@
 # Iotics User and Agent Delegation
 
-For an Agent to work on behalf of a User or Twin a Delegation must be created.
-
 There are two types of delegation:
 
 ## Delegation of Control

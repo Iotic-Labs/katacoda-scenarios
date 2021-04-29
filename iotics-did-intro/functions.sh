@@ -1,4 +1,6 @@
 #!/bin/bash
+set +x
+
 echo "Adding DID functions:"
 
 echo -e "- \e[33mcreate_seed\e[0m"
@@ -41,8 +43,8 @@ make_token() {
     cat /tmp/unicorn.txt
 }
 
-cat << EOF
-###############################################"
-Scenario ready
-###############################################
-EOF
+make_line() {
+    printf '=%.0s' {1..40}
+    echo
+}
+make_line; echo "Scenario ready"; make_line

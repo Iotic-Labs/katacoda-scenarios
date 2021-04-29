@@ -6,6 +6,6 @@
 (*) Correct
 ( ) Incorrect
 
->>Q3: Agents can access Iotics API using agent seed.<<
+>>Q3: Agents access Iotics API by sending their seed.<<
 ( ) Correct
 (*) Incorrect

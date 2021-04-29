@@ -1,6 +1,6 @@
 # Iotics User DID Creation
 
-Firstly, you need to make a random secret seed to generate your identity. 
+Firstly, you need to make a random secret seed to generate your identity.
 
 > All your identities will come from this one seed so you must keep it secret and secure.
 

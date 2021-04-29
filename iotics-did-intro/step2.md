@@ -1,19 +1,9 @@
-# Iotics Agent DID Creation
+# User
 
-To authenticate with the Iotics API you need an Agent. Agents will always work on a User's behalf.
+We use a delegation model whereby _Agents_ are delegated to act on behalf of _Users_. The delegation permission is granted by the _User_ itself and the delegation record is written in the _Agent_ DID.
 
-To create an agent, just run:
+`user_id=$(create_user_id $user_seed)`{{execute}}
 
-`agent_id=$(create_agent_id)`{{execute}}
+`echo $user_id`{{execute}}
 
-`echo $agent_id`{{execute}}
-
-The Agent must ask for permission to work on the User's behalf. This is done with a cryptographic signature of the User's ID with the Agent's private key:
-
-`proof=$(make_agent_proof $user_id)`{{execute}}
-
-To grant permission the User must update their Identity Document with a Delegation of Authentication including the Proof:
-
-`user_delegate_to_agent $proof`{{execute}}
-
-You've not created an agent and assigned it permission to work on your behalf, so we can now move to the final step.
+You've just created your first secure decentralised identity, great job!

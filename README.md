@@ -31,6 +31,13 @@ Therefore the dependencies are configured via [assets](https://www.katacoda.comm
 
 Iotics is in the process to open-source the `iotics-lib-identity` Python package and publish it to [pypi](https://pypi.org/). But until that is done, there is a workaround in place. The package is embedded in the scenario as an asset and `install-sdk.sh` _foreground script_ waits for the assets to be uploaded and `init.py` then installs the package and other Python dependencies.
 
+## Useful Links
+
+* <https://katacoda.com>
+* <https://www.katacoda.community>
+* <https://github.com/katacoda/scenario-examples>
+* <https://github.com/portworx/katacoda-scenarios>
+
 ## License
 
 [MIT License](./LICENSE)

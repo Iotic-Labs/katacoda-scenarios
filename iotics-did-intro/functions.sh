@@ -40,13 +40,12 @@ echo -e "- \e[33mmake_token\e[0m"
 make_token() {
     echo -e "\e[32mCreated Authentication Token\e[0m" >&2
     echo "eyJhbGciOiJFUzI1NiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJleGFtcGxlLmNvbSIsImV4cCI6MTYxOTYxNzc5OCwiaWF0IjoxNjE5NjE3NzU4LCJpc3MiOiJkaWQ6aW90aWNzOmlvdFJvcTRlRzdzdWtGVjNNM2pTWW9jRU5Na29hdHluZk5lVyNhZ2VudC0wIiwic3ViIjoiZGlkOmlvdGljczppb3RSVHBRR0Q3NEpVa1pkdjdCUDh0S3pySGVKWkN3aUhublYifQ.0gK449pt6mcuAurM6v-fEp2Sxv7r2D0l092IYkgdLXabJ27zJhzY92nyZ7lQzmJ-aADHZLGTpMyRqXqanWfQEw"
-    sleep 1
-    cat /tmp/unicorn.txt
 }
 
 make_line() {
     printf '=%.0s' {1..40}
     echo
 }
-
+while [ ! -f /tmp/unicorn.txt ]; do sleep 1; done
+cat /tmp/unicorn.txt
 make_line; echo "Scenario ready"; make_line

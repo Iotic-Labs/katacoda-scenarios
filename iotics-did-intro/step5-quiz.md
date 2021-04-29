@@ -1,5 +1,3 @@
-# Quiz
-
 >>Q1: Applications are running using _Agent_ DID.<<
 (*) Correct
 ( ) Incorrect

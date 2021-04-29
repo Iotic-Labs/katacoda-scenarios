@@ -7,24 +7,24 @@
     "steps": [
       {
         "title": "Seed",
-        "text": "step1.md",
+        "text": "step1-seed.md",
         "code": "functions.sh"
       },
       {
         "title": "User",
-        "text": "step2.md"
+        "text": "step2-user.md"
       },
       {
         "title": "Agent",
-        "text": "step3.md"
+        "text": "step3-agent.md"
       },
       {
         "title": "Authentication",
-        "text": "step4.md"
+        "text": "step4-auth.md"
       },
       {
         "title": "Quiz",
-        "text": "quiz.md"
+        "text": "step5-quiz.md"
       }
     ],
     "intro": {

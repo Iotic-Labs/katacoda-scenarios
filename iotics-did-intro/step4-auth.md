@@ -1,5 +1,3 @@
-# Authentication
-
 Now you have an _Agent_ that is allowed to work on our behalf.
 
 The _Agent_ now can create an **Authentication Token** ([JWT](https://en.wikipedia.org/wiki/JSON_Web_Token)):

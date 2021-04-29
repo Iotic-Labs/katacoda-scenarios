@@ -1,5 +1,3 @@
-# Seed
-
 A random string of characters that is used to generate set of keys for entities like _Users_ and _Agents_. **The seed is secret** because the seed can recreate the keys and therefore impersonate the entity who is associated to the private key.
 
 If you lose the seed you lose your identity - in practice, the ability to control your resources (agents, digital twins).

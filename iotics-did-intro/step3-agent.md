@@ -1,5 +1,3 @@
-# Agent
-
 To authenticate with the Iotics API you need an _Agent_.
 
 An _Agent_ works on behalf of the _User_.

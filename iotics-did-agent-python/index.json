@@ -1,0 +1,41 @@
+{
+  "title": "Continue with Iotics DID in Python",
+  "description": "Introduction to Iotics Decentralised Identity in Python",
+  "difficulty": "Intermediate",
+  "time": "10 min",
+  "details": {
+    "steps": [
+      {
+        "title": "Step 1",
+        "text": "step1.md",
+        "code": "install-sdk.sh"
+      },
+      {
+        "title": "Step 2",
+        "text": "step2.md"
+      },
+      {
+        "title": "Step 3",
+        "text": "step3.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md"
+    },
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+          {"file": "iotic.lib.identity-0.2.post30.tar.gz", "target": "/tmp/"},
+          {"file": "init.py", "target": "/tmp/"}
+      ]
+    }
+  },
+  "environment": {
+    "uilayout": "terminal"
+  },
+  "backend": {
+    "imageid": "python:3.8"
+  }
+}

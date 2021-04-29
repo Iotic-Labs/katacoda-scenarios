@@ -1,23 +1,23 @@
-# Update Digital Twin Metadata
+# Create Digital Twin
 
-To update the Digital Twin you need to update its metadata:
+Create the Digital Twin definition as a JSON payload:
 
-For example, you can update its location and labels (and more…).
+A digital twin needs a unique ID and we use the _Decentralised Identity_ (DID) to uniquely identify them.
 
-`envsubst << EOF > /tmp/metadata.json
-{"location":{"location": {
-               "lat": 6.027456183070403,
-               "lon": 1.4658129805029452}},
- "labels":{"added":[{
-                "lang": "en",
-                "value": "Digital Twin Label Example"}]}
-}
+Therefore before you want to create a digital twin, you need to create the identity for it.
+
+`envsubst << EOF > /tmp/twin.json
+{"twinId":{"value":"$TWIN0"}}
 EOF`{{execute}}
 
-Post the payload back to the endpoint of the digital twin:
+NOTE: All requests are using `Content-Type: application/json`.
 
-`curl --http1.1 -X PATCH "$HOST/twins/$TWIN0" -H "Iotics-ClientAppId: katacoda" -H "Authorization: Bearer $TOKEN" $CONTENTHEADER -d @/tmp/metadata.json`{{execute}}
+`echo $CONTENTHEADER`{{execute}}
 
-You can get the details of the updated Digital Twin like this:
+Post the payload to the `/twins` Iotics API endpoint to create the twin inside the _Host_.
+
+`curl --http1.1 -X POST "$HOST/twins" -H "Iotics-ClientAppId: katacoda" -H "Authorization: Bearer $TOKEN" $CONTENTHEADER -d @/tmp/twin.json`{{execute}}
+
+You can get the details of the crated Digital Twin like this:
 
 `curl --http1.1 -X GET "$HOST/twins/$TWIN0" $CONTENTHEADER -H "Iotics-ClientAppId: katacoda" -H "Authorization: Bearer $TOKEN"`{{execute}}

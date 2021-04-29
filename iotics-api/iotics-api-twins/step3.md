@@ -1,17 +1,23 @@
-# Search for existing Digital Twins
+# Update Digital Twin Metadata
 
-You can find other twins defined on the _Host_ using **search** endpoint.
+To update the Digital Twin you need to update its metadata:
 
-For example, you can search by location by using a **search filter** like this:
+For example, you can update its location and labels (and more…).
 
-`envsubst << EOF > /tmp/search.json
-{"filter":{"location":{"location": {
+`envsubst << EOF > /tmp/metadata.json
+{"location":{"location": {
                "lat": 6.027456183070403,
-               "lon": 1.4658129805029452},
-              "radiusKm": 5}
-}}
+               "lon": 1.4658129805029452}},
+ "labels":{"added":[{
+                "lang": "en",
+                "value": "Digital Twin Label Example"}]}
+}
 EOF`{{execute}}
 
-Post the payload to the `/searches/requests` endpoint of the Iotics API:
+Post the payload back to the endpoint of the digital twin:
 
-`curl --http1.1 -X POST "$HOST/searches/requests?scope=LOCAL" -H "Iotics-ClientAppId: katacoda" -H "Authorization: Bearer $TOKEN" $CONTENTHEADER -H "Iotics-RequestTimeout: $(date +%FT%T.000000 --date="+10 second") -d @/tmp/search.json`{{execute}}
+`curl --http1.1 -X PATCH "$HOST/twins/$TWIN0" -H "Iotics-ClientAppId: katacoda" -H "Authorization: Bearer $TOKEN" $CONTENTHEADER -d @/tmp/metadata.json`{{execute}}
+
+You can get the details of the updated Digital Twin like this:
+
+`curl --http1.1 -X GET "$HOST/twins/$TWIN0" $CONTENTHEADER -H "Iotics-ClientAppId: katacoda" -H "Authorization: Bearer $TOKEN"`{{execute}}

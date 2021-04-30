@@ -7,14 +7,24 @@ A digital twin needs a unique ID and we use the _Decentralised Identity_ (DID) t
 Therefore before you want to create a digital twin, you need to create the identity for it.
 
 `envsubst << EOF > /tmp/twin.json
-{"twinId":{"value":"$TWIN0"}}
+{
+    "twinId": {
+        "value":"$TWIN0"
+    }
+}
 EOF`{{execute}}
 
 NOTE: All requests are using `Content-Type: application/json`.
 
 Post the payload to the `/twins` Iotics API endpoint to create the twin inside the _Host_.
 
-`curl --http1.1 -X POST "$HOST/twins" -H "Iotics-ClientAppId: katacoda" -H "Authorization: Bearer $TOKEN" -H "Content-Type: application/json" -H "Accept: application/json" -d @/tmp/twin.json | jq`{{execute}}
+`curl -s -X POST -d @/tmp/twin.json "$HOST/twins" \
+    -H "Iotics-ClientAppId: katacoda" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -H "Authorization: Bearer $TOKEN" \
+    --http1.1 \
+| jq`{{execute}}
 
 You can get the details of the created Digital Twin like this:
 

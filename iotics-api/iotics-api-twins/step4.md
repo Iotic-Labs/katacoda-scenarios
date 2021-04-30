@@ -24,12 +24,11 @@ Apart from the standard headers, the search request also requires a timeout (`Io
 
 Post the payload to the `/searches/requests` endpoint of the Iotics API:
 
-`TIMEOUT=$(date +%FT%T.000000 --date="+30 second")
+`TIMEOUT=$(date +%FT%T.000000 --date="+30 second") && \
 curl -X POST -d @/tmp/search.json "$HOST/searches?scope=LOCAL" \
     -H "Iotics-RequestTimeout: $TIMEOUT" \
     -H "Iotics-ClientAppId: katacoda" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \
     -H "Authorization: Bearer $TOKEN" \
-    -s --http1.1 \
-| jq`{{execute}}
+    -s --http1.1`{{execute}}

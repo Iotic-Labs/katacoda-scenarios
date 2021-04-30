@@ -5,12 +5,19 @@ To update the Digital Twin you need to update its metadata:
 For example, you can update its location and labels (and more…).
 
 `envsubst << EOF > /tmp/metadata.json
-{"location":{"location": {
-               "lat": 6.027456183070403,
-               "lon": 1.4658129805029452}},
- "labels":{"added":[{
-                "lang": "en",
-                "value": "Digital Twin Label Example"}]}
+{
+    "location": {
+        "location": {
+            "lat": 6.027456183070403,
+            "lon": 1.4658129805029452
+        }
+    },
+    "labels": {
+        "added": [{
+            "lang": "en",
+            "value": "Digital Twin Label Example"
+        }]
+    }
 }
 EOF`{{execute}}
 

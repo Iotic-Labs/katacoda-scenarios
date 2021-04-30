@@ -23,8 +23,20 @@ EOF`{{execute}}
 
 Post the payload back to the endpoint of the digital twin:
 
-`curl --http1.1 -X PATCH "$HOST/twins/$TWIN0" -H "Iotics-ClientAppId: katacoda" -H "Authorization: Bearer $TOKEN" -H "Content-Type: application/json" -H "Accept: application/json" -d @/tmp/metadata.json | jq`{{execute}}
+`curl -X PATCH -d @/tmp/metadata.json "$HOST/twins/$TWIN0" \
+    -H "Iotics-ClientAppId: katacoda" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -H "Authorization: Bearer $TOKEN" \
+    -s --http1.1 \
+| jq`{{execute}}
 
 You can get the details of the updated Digital Twin like this:
 
-`curl --http1.1 -X GET "$HOST/twins/$TWIN0" -H "Content-Type: application/json" -H "Accept: application/json" -H "Iotics-ClientAppId: katacoda" -H "Authorization: Bearer $TOKEN" | jq`{{execute}}
+`curl -X GET "$HOST/twins/$TWIN0" \
+    -H "Iotics-ClientAppId: katacoda" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -H "Authorization: Bearer $TOKEN" \
+    -s --http1.1 \
+| jq`{{execute}}

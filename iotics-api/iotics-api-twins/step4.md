@@ -12,6 +12,17 @@ For example, you can search by location by using a **search filter** like this:
 }}
 EOF`{{execute}}
 
+Apart from the standard headers, the search request also requires a timeout (`Iotics-RequestTimeout`).
+
+> This needs to be an absolute time in the future. We are working on an improvement to make this a relative time instead to deal better with potential time differences on different systems.
+
 Post the payload to the `/searches/requests` endpoint of the Iotics API:
 
-`curl --http1.1 -X POST -H "Iotics-ClientAppId: katacoda" -H "Authorization: Bearer $TOKEN" -H "Content-Type: application/json" -H "Accept: application/json" -H "Iotics-RequestTimeout: $(date +%FT%T.000000 --date="+30 second") -d @/tmp/search.json "$HOST/searches?scope=LOCAL" | jq`{{execute}}
+`curl -X POST -d @/tmp/search.json "$HOST/searches?scope=LOCAL" \
+    -H "Iotics-RequestTimeout: $(date +%FT%T.000000 --date="+30 second") \
+    -H "Iotics-ClientAppId: katacoda" \
+    -H "Content-Type: application/json" \
+    -H "Accept: application/json" \
+    -H "Authorization: Bearer $TOKEN" \
+    -s --http1.1 \
+| jq`{{execute}}

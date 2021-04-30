@@ -1,8 +1,8 @@
 # Get started with Iotics DID in Python
 
-This scenario will walk you through getting started using Python with the IOTICS way of Decentralised Identity (DID).
+This scenario will walk you through getting started using Python with the IOTICS way of Decentralized Identity (DID).
 
-By the end of this scenario you will understand the details of how IOTICS handles Identity management and its delegation model. You will be able to create identities for agents, users and twins. You will also be able to set an agent to act on behalf of a user orto control a twin.
+By the end of this scenario you will understand the details of how IOTICS handles Identity management and its delegation model. You will be able to create identities for agents, users and digital twins. You will also be able to set an agent to act on behalf of a user or to control a digital twin.
 
 You can read more about DIDs [here](https://www.w3.org/TR/did-core/).
 

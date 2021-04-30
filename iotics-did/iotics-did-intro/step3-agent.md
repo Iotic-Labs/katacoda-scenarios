@@ -21,7 +21,7 @@ The _Agent_ must ask for permission to work on the _User_'s behalf. This is done
 
 `proof=$(make_agent_proof $user_id)`{{execute}}
 
-To **grant permission** the _User_ must update their _Decentralised Identity Document_ (DID) with a **Delegation of Authentication** including the _Proof_:
+To **grant permission** the _User_ must update their _Decentralized Identity Document_ (DID) with a **Delegation of Authentication** including the _Proof_:
 
 `user_delegate_to_agent $proof`{{execute}}
 

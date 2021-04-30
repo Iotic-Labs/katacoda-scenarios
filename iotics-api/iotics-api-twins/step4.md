@@ -5,11 +5,17 @@ You can find other twins defined on the _Host_ using **search** endpoint.
 For example, you can search by location by using a **search filter** like this:
 
 `envsubst << EOF > /tmp/search.json
-{"filter":{"location":{"location": {
-               "lat": 6.027456183070403,
-               "lon": 1.4658129805029452},
-              "radiusKm": 5}
-}}
+{
+    "filter": {
+        "location": {
+            "location": {
+                "lat": 6.027456183070403,
+                "lon": 1.4658129805029452
+            },
+            "radiusKm": 5
+        }
+    }
+}
 EOF`{{execute}}
 
 Apart from the standard headers, the search request also requires a timeout (`Iotics-RequestTimeout`).
@@ -19,7 +25,7 @@ Apart from the standard headers, the search request also requires a timeout (`Io
 Post the payload to the `/searches/requests` endpoint of the Iotics API:
 
 `curl -X POST -d @/tmp/search.json "$HOST/searches?scope=LOCAL" \
-    -H "Iotics-RequestTimeout: $(date +%FT%T.000000 --date="+30 second") \
+    -H "Iotics-RequestTimeout: $(date +%FT%T.000000 --date=\"+30 second\") \
     -H "Iotics-ClientAppId: katacoda" \
     -H "Content-Type: application/json" \
     -H "Accept: application/json" \

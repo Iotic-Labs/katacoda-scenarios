@@ -111,7 +111,7 @@ Lets get spacectl to create it in our space!
 When your twin is created, it's given a unique ID. You can see this in the command output. In order to refer to
 your twin later, it's a good idea to save this ID to a file. So lets grab it out of the output log.
 
-`cat create_twins_output.log | grep CREATED | awk '{print $4} > twin_ids`{{execute}}
+`cat create_twins_output.log | grep CREATED | awk '{print $4}' > twin_ids`{{execute}}
 
 ## Lookup twins
 
@@ -125,7 +125,7 @@ There's lots of ways to search so don't worry about the exact query syntax for n
 `echo {"filter": {"text": "cat_house"}, "responseType": "FULL"} | ./iotic-spacectl searchtwins`{{execute}}
 
 You can also search for twins using a location and a range in meters.
-`echo -e "51.5013631\t-0.1593983\t5" | ./spacectl searchgeotwins`{{execute}}
+`echo -e "51.5013631\t-0.1593983\t5" | ./iotic-spacectl searchgeotwins`{{execute interrupt}}
 
 ## Recap
 

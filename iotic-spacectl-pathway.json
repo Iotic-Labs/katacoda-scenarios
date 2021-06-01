@@ -1,6 +1,6 @@
 {
-  "title": "Iotics API",
-  "description": "Introduction to Iotics API",
+  "title": "Iotics Spacectl",
+  "description": "Introduction to Iotics using spacectl",
   "courses": [{
     "course_id": "iotic-spacectl-intro",
     "title": "Intro to Iotics using spacectl",

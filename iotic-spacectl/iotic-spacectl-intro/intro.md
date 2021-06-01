@@ -1,25 +1,32 @@
 # Introduction to iotics using spacectl
+This scenario will get you started on your IOTICS journey.
 
-This scenario will get you started with iotics.
+IOTICS is all about data interactions, when data is shared and exchanged across applications and even the boundaries of enterprises and industries.
 
-Before we dive in, lets go over some basics.
+We believe data interactions should be:
 
-Iotics is all about digital twins. These twins are digital copies of physical assets.
+* secure and transparent
+* across any format
+* available anywhere
 
-Twins have metadata which can be set and updated. They can also have feeds for when
-a feed of data is more appropriate.
+IOTICS enables this connected world through the use of Digital Twins.
 
-For example, if you have a fleet of taxis, you might model each taxi as a digital twin.
-You might have metadata describing the type of car, age, model, whether it's busy or not, etc
-Then you might add a feed to share the location.
+Digital Twins are digital copies of physical assets, each with their own configurable and updatable metadata. They can also have feeds for when a feed of data is more appropriate. All of these twins exist within an IOTICSpace.
 
-All of these twins exist within an Iotic space.
+IOTICSpace allows you to simplify and coordinate this data, creating an ecosystem of data interactions internally, or externally of your enterprise.
 
-They can interact with each other, but they can also interact with other twins from other companies, or
-twins of public data within the iotics platform, such as weather data, etc.
+This tutorial will take you through the creation of your first Digital Twin.
 
-So in the above example, if you want to control a taxi fleet, you might want to also take into consideration
-road congestion, weather forecasts, football events, train times, etc to ensure your taxis are in the right
-places at the right times. You can do all this with Iotics.
+By the end of this tutorial you’ll be able to:
 
-So lets jump in and start using iotics!
+* Create a model of a Digital Twin
+* Create Digital Twin
+* Find a Digital Twin
+* Follow a Digital Twin
+* View the data from a Digital Twin
+
+If you have any questions or feedback, contact us at: support@iotics.com. 
+
+If you don’t have your own space yet sign up to your 90 day free trial here: http://iotics.com/
+
+Now, lets jump in and start using IOTICS!

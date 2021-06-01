@@ -1,1 +1,1 @@
-{"comments": {"added": [{"lang": "en", "value": "JM test twin"}]}, "labels": {"added": [{"lang": "en", "value": "JM test twin"}]}, "location": {"location": {"lat": 51.507359, "lon": -0.136439}}, "newVisibility": {"visibility": "PUBLIC"}, "properties": {"clearedAll": false}, "tags": {"added": ["JMTWIN"]}}	testfeed
+{"comments":{"added":[{"lang":"en","value":"This is my house"}]},"labels":{"added":[{"lang":"en","value":"My house"}]},"location":{"location":{"lat":51.5013631,"lon":-0.1593983}},"newVisibility":{"visibility":"PUBLIC"},"tags":{"added":["cat_house"]}}

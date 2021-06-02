@@ -31,7 +31,7 @@
     },
     "assets": {
     "client": [
-{"file": "example-twin.json", "target": "/root/"}
+{"file": "example-twin.json", "target": "/root/"},
 {"file": "example-feed.json", "target": "/root/"}
 ]
     }

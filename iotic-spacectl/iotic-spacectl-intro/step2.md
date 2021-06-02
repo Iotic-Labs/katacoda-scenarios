@@ -1,37 +1,58 @@
-# Publish and follow a feed
+# Create a twin in a space
 
-Iotic twins can have feeds which allow you to publish and follow data related to that twin.
+## Configure
 
-In the previous step, you created a dozen twins, each with a feed. We can use spacectl to follow and publish
-data to the feeds.
+First, we need to tell spacectl to create a config file for future operations. We do this by
+simply pointing spacectl at the space we wish to use.
+If you have a space setup already eg `yourname.iotics.space`, you can use that instead in the following
+examples.
 
-Remember also that we saved the output when we created the twins, so that we can use the twin IDs.
-Let's use that output to create a couple of files.
+So lets begin by creating a config file based on the space `plateng.iotics.space`.
 
-`cat dozen_twin_ids | awk '{print $1 "\ttestfeed"}' > dozen_twins_follow`{{execute}}
+`./iotic-spacectl init --host plateng.iotics.space`{{execute}}
 
-`cat dozen_twin_ids | awk '{print $1 "\ttestfeed\t{\"hello\":\"world\"}"}' > dozen_twins_publish`{{execute}}
+Behind the scenes, spacectl created a new user identity and stored some secrets in the configuration file.
+The default output location is `~/.spacectl.yaml` but you can specify this with `--config <file>` for example
+if you have multiple spaces you wish to manage separately.
 
-Don't worry if you don't understand all the above, we're just creating a list of twin feeds to follow, and a the second one
-is a list of twin feeds along with some data to publish (`{"hello":"world}"`).
+Lets take a very quick look at the config file
+`cat .spacectl.yaml`{{execute}}
 
-Now let's go!
+The identity configuration here means that anything you create from here on in will be owned by YOU. So keep
+the config file safe!
 
-First, lets setup something following the dozen twin feeds.
+## Create the twin
 
-`cat dozen_twins_follow | ./iotic-spacectl follow --host plateng.iotics.space`{{execute T1}}
+Lets take a look at our twin json file!
+If you decided to skip the above, you can use the pre-generated json file `example-twin.json`
 
-Now lets publish that data! You might need to click this one twice - katacoda issue?
+`cat twin.json`{{execute}}
 
-`cat dozen_twins_publish | ./iotic-spacectl publish --host plateng.iotics.space`{{execute T2}}
+Lets get spacectl to create it in our space!
 
-Will the data show up? The suspense! Switch back to our first terminal and you should see the data.
+`cat twin.json | ./iotic-spacectl createtwins | tee create_twins_output.log`{{execute}}
 
-So we've learnt how to create a twin, a feed, publish and follow data on it.
+When your twin is created, it's given a unique ID. You can see this in the command output. In order to refer to
+your twin later, it's a good idea to save this ID to a file. So lets grab it out of the output log.
 
-## So how would you get data into Iotics?
+`cat create_twins_output.log | grep CREATED | awk '{print $4}' > twin_ids`{{execute}}
 
-1. Get the data from where it is (an API, csv, database, etc)
-2. Convert it to json
-3. Use `iotic-spacectl createtwins` to import it into your space
-4. If you defined some feeds, use `iotic-spacectl publish` to publish new data to your twins feeds.
+## Lookup twins
+
+But how do we know the twin is actually in the space? We can use describetwin with the ID that we saved.
+
+`cat twin_ids | ./iotic-spacectl describetwins`{{execute}}
+
+But what if we don't know the IDs? We can do a search. In the twin json, we defined a tag - "cat_house". Lets use that.
+There's lots of ways to search so don't worry about the exact query syntax for now.
+
+`echo {"filter": {"text": "cat_house"}, "responseType": "FULL"} | ./iotic-spacectl searchtwins`{{execute}}
+
+You can also search for twins using a location and a range in meters.
+`echo -e "51.5013631\t-0.1593983\t5" | ./iotic-spacectl searchgeotwins`{{execute interrupt}}
+
+## Recap
+
+In this first step, we touched on data modeling, creating some metadata for a twin. We created a json file for the twin,
+and created the twin in the space.
+We also looked up the twin by ID, and conducted a search both by tag and by location.

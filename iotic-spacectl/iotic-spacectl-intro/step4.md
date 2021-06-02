@@ -16,6 +16,8 @@ Well, since we set `storeLastValue = true` in our feed definition, we can check 
 
 `cat twin_ids | awk '{print $1 "\toccupancy"}' | ./iotic-spacectl getlastfeedvalue`{{execute}}
 
+In the output notice the line starting with `LASTFEEDVALUE` which shows you the last stored value for this feed.
+
 But if we wanted to actually see the published data as it happens, we can follow the feed, and then publish to it.
 
 First lets set something up following the feed.

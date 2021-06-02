@@ -11,10 +11,10 @@ TODO: Is the download public?
 
 ## Model a twin
 
+If you want to skip this step, we included a ready modeled twin, so you can execute `cp example-twin.json twin.json`{{execute}} and skip to step 2.
+
 To create a twin, we need to give the twin some data. This is best done with json.
 To make things a little easier, you can use the command `modeltwin` to ask simple questions and output json.
-
-If you'd rather just skip ahead, you can skip this step and use the pre-generated `example-twin.json` file.
 
 So lets create the json definition of a twin.
 

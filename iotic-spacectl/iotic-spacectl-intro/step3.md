@@ -7,9 +7,9 @@ As people come and go from our house, the number occupants changes. Lets model t
 
 ## Model the feed
 
-`./iotic-spacectl modelfeed`{{execute}}
+If you want to skip this step, we included a ready modeled feed, so you can execute `cp example-feed.json feed.json`{{execute}} and skip to 'create the feed on our house twin'.
 
-Once again, if you want to skip this step, you'll find a ready made version of the json in `example_feed.json`.
+`./iotic-spacectl modelfeed`{{execute}}
 
 Simply enter the questions to create some metadata about our feed:
 

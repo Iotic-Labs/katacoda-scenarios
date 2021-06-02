@@ -30,7 +30,10 @@
       "text": "finish.md"
     },
     "assets": {
-    "client": [{"file": "example-twin.json", "target": "/root/"}]
+    "client": [
+{"file": "example-twin.json", "target": "/root/"}
+{"file": "example-feed.json", "target": "/root/"}
+]
     }
   },
   "environment": {

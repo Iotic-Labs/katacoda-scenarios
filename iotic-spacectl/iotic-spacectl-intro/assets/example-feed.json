@@ -1,0 +1,1 @@
+{"comments":{"added":[{"lang":"en","value":"Number of occupants in our house"}]},"labels":{"added":[{"lang":"en","value":"occupancy"}]},"storeLast":true,"tags":{"added":["occupancy"]},"values":{"added":[{"comment":"Number of people in the house","dataType":"int","label":"occupancy","unit":"people"}]}}

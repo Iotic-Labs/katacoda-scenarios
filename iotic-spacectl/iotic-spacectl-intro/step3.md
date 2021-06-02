@@ -1,6 +1,52 @@
-# Delete twins
+# Model a feed
 
-If you don't need a twin anymore, you can delete it.
-Just send some IDs into spacectl with the `deletetwins` command.
+As we saw in the first step, twins can have metadata associated with them - comments, labels, tags etc.
+Twins can also have feeds for real time data.
+We've already created a twin of our house, so lets look at how to add a feed.
+As people come and go from our house, the number occupants changes. Lets model this as a feed on our twin.
 
-`cat dozen_twin_ids | ./iotic-spacectl deletetwins --host plateng.iotics.space`{{execute T2}}
+## Model the feed
+
+`./iotic-spacectl modelfeed`{{execute}}
+
+Once again, if you want to skip this step, you'll find a ready made version of the json in `example_feed.json`.
+
+Simply enter the questions to create some metadata about our feed:
+
+Comments: "Number of occupants in our house"
+Labels: "occupancy"
+
+StoreLastValue: "true" - this allows people looking at our twin to automatically get the last value of our occupancy feed,
+even if they weren't listening to the feed when we last published to it. The last value of the feed is stored.
+
+Tags: "occupancy"
+
+Values:
+Label: "occupancy"
+Unit: "people"
+Comment: "number of people in the house"
+DataType: int
+
+This will have written to a file `feed.json` or a location specified by `--output <file>`.
+
+## Create the feed on our house twin
+
+To create the feed, we need to tell spacectl which twin, and give the feed a name. It expects these, along with the json, to be given in stdin.
+
+`cat twin_ids | awk '{system("echo -n \"" $1 "\toccupancy\t\";cat feed.json")}' > create_feed_data`{{execute}}
+
+If you'd rather, you can just use an editor, or your favourite scripting language for the above step.
+
+Now lets create the feed.
+
+`cat create_feed_data | ./iotic-spacectl createfeeds`{{execute}}
+
+## Check the feed is really there
+
+We can check the feed is there by doing a describetwin.
+
+`cat twin_ids | ./iotic-spacectl describetwins`{{execute}}
+
+To get full details about the feed, we can then do a describefeed, including the name of the feed.
+
+`cat twin_ids | awk '{print $1 "\toccupancy"}' | ./iotic-spacectl describefeeds`{{execute}}

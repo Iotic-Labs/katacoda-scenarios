@@ -23,7 +23,7 @@ Tags: "occupancy"
 
 Values:
 Label: "occupancy"
-Unit: "people"
+Unit: "https://data.iotics.com/people"
 Comment: "number of people in the house"
 DataType: int
 

@@ -26,6 +26,8 @@ First lets set something up following the feed.
 
 Now lets publish an update, since we just invited peple over and now our occupancy is 10!
 
+First lets open a new terminal so we can leave the follow command running. `echo "New terminal"`{{execute T2}}
+
 `cat twin_ids | awk '{print $1 "\toccupancy\t{\"occupancy\": 10}"}' | ./iotic-spacectl publish`{{execute T2}}
 
 ## Recap

@@ -30,3 +30,13 @@ If you have any questions or feedback, contact us at: support@iotics.com.
 If you don’t have your own space yet sign up to your 90 day free trial here: http://iotics.com/
 
 Now, lets jump in and start using IOTICS!
+
+Testing dropdown:
+
+<details>
+<summary>Test</summary>
+<br>
+Test Dropdown
+</details>
+
+End of test.

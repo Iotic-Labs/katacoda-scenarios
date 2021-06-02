@@ -30,6 +30,9 @@ First lets open a new terminal so we can leave the follow command running. `echo
 
 `cat twin_ids | awk '{print $1 "\toccupancy\t{\"occupancy\": 10}"}' | ./iotic-spacectl publish`{{execute T2}}
 
+Lastly, switch back to the first terminal where we left our follow command running, and you will see the update
+was received.
+
 ## Recap
 
 In this step, we have published to our feed, retrieved the last stored value of our feed, and lastly

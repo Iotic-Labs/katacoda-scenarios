@@ -1,13 +1,4 @@
-# Create a twin
-
-To get started with IOTICS, you can use spacectl.
-
-Spacectl is a general purpose swiss army knife of operating with an IOTICSpace.
-
-You can download spacectl from https://nexus.cor.corp.iotic/#browse/browse:generic:iotic-spacectl
-Run it on linux, mac or windows.
-
-TODO: Is the download public?
+# Creating a model for my twins
 
 ## Model a twin
 
@@ -20,14 +11,16 @@ If you want to skip this step, we've included a ready modelled twin, just run th
 </details>
 
 To create a twin, we need to give the twin some data. This is best done with json.
+
 To make things a little easier, you can use the command `modeltwin`, which will ask you questions in the terminal you can answer to output json.
 
-So lets create the json definition of a twin.
+So lets create the json definition of a twin. For our first example, lets create a twin of our house:
 
 `./iotic-spacectl modeltwin`{{execute}}
 
+The default output location for this is `twin.json`, but you can set a different location with `--output <file>`.
+
 You can now answer the simple questions in the terminal to create the metadata for your twin.
-For our first example, lets create a twin of our house.
 
 Click on the terminal, and simply answer the questions to create the json.
 
@@ -40,11 +33,12 @@ Lets just add a single comment for now:
 `This is my house`
 
 And then just press enter to accept the default language `en`.
+
 Once you've finished adding comments just press enter to move to the next step.
 
 ### Labels
 
-Twins can have one or more labels, in any language.
+Twins can have one or more labels, in any language, to your twin. For the purpose of this tutorial we'll treat them the same as properties(explained below).
 
 Lets add a single label for now:
 
@@ -61,23 +55,23 @@ Twins can have a location. For example, here's the location for Buckingham Palac
 
 ### Visibility
 
-You can either keep your twin PRIVATE or make it PUBLIC.
+Visibility determines if your twin can be found in search. You can either keep your twin PRIVATE or make it PUBLIC.
 
-Just press enter to use the default `PUBLIC`.
+Just press enter to use the default: `PUBLIC`.
 
 ### Properties
 
-For now, to keep it simple, we won't add any properties.
+Properties allow you to add additional information Twins, enabling more granular information and complex relationships to be built into your ecosystem. For example you could give your twins Categories or list the Manu factory of machinery allowing you to easily find all the twins that match your interest.
 
-TODO:?
+You can read more about properties [here](https://docs.iotics.com/docs/tutorial-4-adding-properties).
 
-So just press enter here.
+For now, let's keep it simple, just press enter here.
 
 ### Tags
 
-Tags are useful for things like 'category' or other markers.
+Tags are useful for use as markers, such as categories. For the purpose of this tutorial we'll treat them the same as properties.
 
-Lets just add a single category:
+Lets just add a single category tag for now:
 
 `cat_house`{{execute}}
 
@@ -85,4 +79,6 @@ Press enter to finish the tags section.
 
 After running through the above, we should now have a json twin file ready to use.
 
-The default save location is `twin.json` but you can specify with `--output <file>`
+## Recap
+
+In this step we created a json file that can be used as model that'll we'll be able to use in the future to create our twins quickly and easily. 

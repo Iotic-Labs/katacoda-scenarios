@@ -1,4 +1,4 @@
-Great work!
+Great work, you've finished the IOTICS introductory tutorial!
 
 You should know have a basic understand of how to:
 
@@ -10,7 +10,7 @@ You should know have a basic understand of how to:
 
 If you would like to try Iotics, take a look at our [Preview Program](https://www.iotics.com/solutions/preview-program/).
 
-For more information about Iotics technology see:
+For more information about IOTICS, see:
 
 * <https://iotics.com>
 * <https://docs.iotics.com>

@@ -1,4 +1,4 @@
-# Introduction to iotics using spacectl
+# Introduction to IOTICS using spacectl
 This scenario will get you started on your IOTICS journey.
 
 IOTICS is all about data interactions, when data is shared and exchanged across applications and even the boundaries of enterprises and industries.
@@ -25,7 +25,7 @@ By the end of this tutorial you’ll be able to:
 * Follow a Digital Twin
 * View the data from a Digital Twin
 
-If you have any questions or feedback, contact us at: support@iotics.com. 
+If you have any questions or feedback, contact us at: support@iotics.com.
 
 If you don’t have your own space yet sign up to your 90 day free trial here: http://iotics.com/
 

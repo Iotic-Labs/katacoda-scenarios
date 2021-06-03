@@ -15,10 +15,14 @@ If you want to skip this step, we've included a ready modelled feed, just run th
 <details>
 <summary>Skip this step</summary>
 <br>
-`./iotic-spacectl modelfeed`{{execute}}
+`cp example-feed.json feed.json`{{execute}}
 </details>
 
-Simply answer the questions to create some metadata about our feed:
+To model the feed you first run:
+
+`./iotic-spacectl modelfeed`{{execute}}
+
+Then simply answer the questions to create some metadata about our feed:
 
 Comments: "Number of occupants in our house"
 Labels: "occupancy"

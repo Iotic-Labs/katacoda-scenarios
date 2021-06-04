@@ -61,7 +61,7 @@ Just press enter to use the default: `PUBLIC`.
 
 ### Properties
 
-Properties allow you to add additional information Twins, enabling more granular information and complex relationships to be built into your ecosystem. For example you could give your twins Categories or list the Manu factory of machinery allowing you to easily find all the twins that match your interest.
+Properties allow you to add additional information Twins, enabling more granular information and complex relationships to be built into your ecosystem. For example you could give your house twin descriptions such as address or number of bedrooms.
 
 You can read more about properties [here](https://docs.iotics.com/docs/tutorial-4-adding-properties).
 

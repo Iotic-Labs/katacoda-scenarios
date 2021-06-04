@@ -4,7 +4,7 @@
   "courses": [{
     "course_id": "iotic-spacectl-intro",
     "title": "Intro to using IOTICS",
-    "description": "An introduction to using the Iotics API"
+    "description": "Get started with Iotics API - make any data available to safely interact with all other data"
   }
   ]
 }

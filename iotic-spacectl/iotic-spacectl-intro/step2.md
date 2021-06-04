@@ -6,9 +6,9 @@ As we're using SpaceCTL for this tutorial we need to configute it, done by creat
 
 If you have a space setup already (for example: `yourname.iotics.space`), you can use that in the following examples instead.
 
-Lets begin by creating a config file based on the space `plateng.iotics.space`.
+Lets begin by creating a config file based on the space `demo.iotics.space`.
 
-`./iotic-spacectl init --host plateng.iotics.space`{{execute}}
+`./iotic-spacectl init --host demo.iotics.space`{{execute}}
 
 Behind the scenes we've created a new user identity and stored some credentials in the configuration file.
 

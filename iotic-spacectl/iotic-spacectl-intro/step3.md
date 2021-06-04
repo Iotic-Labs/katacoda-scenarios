@@ -31,7 +31,7 @@ even if they weren't listening to the feed when we last published to it. The las
 * `Tags`: "occupancy"
 * `Values`:
 * `Label`: "occupancy"
-* `Unit`: "https://data.iotics.com/people"
+* `Unit`: "http://example.org/something/occupancy"
 * `Comment`: "number of people in the house"
 * `DataType`: int
 

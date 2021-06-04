@@ -1,6 +1,6 @@
 Great work, you've finished the IOTICS introductory tutorial!
 
-You should know have a basic understand of how to:
+You should know have a basic understanding of how to:
 
 * Create a model of a Digital Twin
 * Create Digital Twin

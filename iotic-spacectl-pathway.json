@@ -1,10 +1,10 @@
 {
-  "title": "Iotics API",
-  "description": "An introduction to IOTICS",
+  "title": "iotic-spacectl",
+  "description": "An introduction to iotic-spacectl",
   "courses": [{
     "course_id": "iotic-spacectl-intro",
-    "title": "Intro to using IOTICS",
-    "description": "Get started with Iotics API - make any data available to safely interact with all other data"
+    "title": "Intro to using iotic-spacectl utility application.",
+    "description": "Get started with iotic-spacectl - an utility application to operate and test an IOTICSpace"
   }
   ]
 }

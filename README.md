@@ -4,6 +4,11 @@ Katacoda Scenarios for Iotics products.
 
 Visit <https://docs.iotics.com> for more documentation on using Iotics and <https://www.iotics.com/> for the overview.
 
+## NOTICE
+
+This repository is no longer maintained and may be deleted without warning in
+the future.
+
 ## Contributing
 
 1. Fork <https://github.com/Iotic-Labs/katacoda-scenarios>
@@ -24,8 +29,8 @@ We would prefer to provide a pre-built Docker image ("Katacoda environment") wit
 
 But custom Katacoda environments are only available with Katacoda subscription.
 
-* <https://www.katacoda.community/environments.html>
-* <https://github.com/katacoda/scenario-examples/tree/main/environments>
+- <https://www.katacoda.community/environments.html>
+- <https://github.com/katacoda/scenario-examples/tree/main/environments>
 
 Therefore the dependencies are configured via [assets](https://www.katacoda.community/customizing-environment.html#uploading-files).
 
@@ -33,10 +38,10 @@ Iotics is in the process to open-source the `iotics-lib-identity` Python package
 
 ## Useful Links
 
-* <https://katacoda.com>
-* <https://www.katacoda.community>
-* <https://github.com/katacoda/scenario-examples>
-* <https://github.com/portworx/katacoda-scenarios>
+- <https://katacoda.com>
+- <https://www.katacoda.community>
+- <https://github.com/katacoda/scenario-examples>
+- <https://github.com/portworx/katacoda-scenarios>
 
 ## License
 
@@ -44,9 +49,9 @@ Iotics is in the process to open-source the `iotics-lib-identity` Python package
 
 ## Technology Used
 
-* Katacoda
-* Markdown
-* Python
-* Shell
-* JSON
-* DID
+- Katacoda
+- Markdown
+- Python
+- Shell
+- JSON
+- DID
